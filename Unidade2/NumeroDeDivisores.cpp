@@ -18,7 +18,7 @@ int divisores(int n){
     return d;
 }
 
-vector<int> sequence(int inicio, int fim) {
+vector<int> sequencia(int inicio, int fim) {
     vector<int> seq;
     seq.push_back(1);
 
@@ -29,8 +29,8 @@ vector<int> sequence(int inicio, int fim) {
     return seq;
 }
 
-int intInSequence(int a, int b){
-    vector<int> seq = sequence(a, b);
+int intNaSequencia(int a, int b){
+    vector<int> seq = sequencia(a, b);
     int c = 0;
     for (size_t i = 0; i < seq.size() ; i++) {
         if (seq[i] >= a && seq[i] <= b) {
@@ -48,7 +48,7 @@ int main() {
 
     for (int i = 0; i < t; i++) {
         cin >> a >> b;
-        cout << "Caso " << i+1 << ": " << intInSequence(a, b) << endl; 
+        cout << "Caso " << i+1 << ": " << intNaSequencia(a, b) << endl; 
     }
     
     return 0;
